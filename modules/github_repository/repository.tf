@@ -1,5 +1,6 @@
 resource "github_repository" "repository" {
   name                   = var.repository_name
+  is_template            = var.is_template
   allow_merge_commit     = false
   allow_rebase_merge     = false
   allow_squash_merge     = true

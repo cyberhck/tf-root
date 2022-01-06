@@ -1,7 +1,5 @@
 module "test" {
-  source = "./modules/tf_github_repository"
+  source                 = "./modules/template_repository"
   repository_description = ""
-  repository_name = "test"
-  github_pat = var.gh_token
-  tfe_organization = "cyberhck"
+  repository_name        = "tf-repo-template"
 }

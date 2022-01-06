@@ -1,14 +1,14 @@
 terraform {
   backend "remote" {
     organization = "cyberhck"
-    hostname = "app.terraform.io"
+    hostname     = "app.terraform.io"
     workspaces {
       name = "tf-root"
     }
   }
   required_providers {
     github = {
-      source = "integrations/github"
+      source  = "integrations/github"
       version = ">= 4.18.0"
     }
   }
@@ -16,8 +16,8 @@ terraform {
 }
 
 provider "github" {
-  owner        = "cyberhck"
-  token        = var.gh_token
+  owner = "cyberhck"
+  token = var.gh_token
 }
 
 provider "tfe" {

@@ -20,12 +20,17 @@ resource "github_branch_default" "default_branch" {
 }
 
 resource "github_branch_protection" "branch_protection" {
-  pattern       = "main"
-  repository_id = github_repository.repository.node_id
-  enforce_admins = true
-  allows_deletions = false
+  pattern                = "main"
+  repository_id          = github_repository.repository.node_id
+  enforce_admins         = true
+  allows_deletions       = false
+  require_signed_commits = true
   required_pull_request_reviews {
-    dismiss_stale_reviews  = true
-    restrict_dismissals    = true
+    dismiss_stale_reviews = false
+    required_approving_review_count = 1
+  }
+  required_pull_request_reviews {
+    dismiss_stale_reviews = true
+    restrict_dismissals   = true
   }
 }

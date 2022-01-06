@@ -16,19 +16,10 @@ terraform {
 }
 
 provider "github" {
-  alias = "personal"
-  owner = "cyberhck"
-  token = var.gh_token
-}
-
-provider "github" {
-  alias        = "fossapps"
   organization = "fossapps"
   token        = var.gh_token
 }
-
-provider "github" {
-  alias        = "smsnepal"
-  organization = "smsnepal"
-  token        = var.gh_token
+provider "tfe" {
+  token = var.tf_token
 }
+

@@ -16,9 +16,10 @@ terraform {
 }
 
 provider "github" {
-  organization = "fossapps"
+  owner        = "cyberhck"
   token        = var.gh_token
 }
+
 provider "tfe" {
   token = var.tf_token
 }

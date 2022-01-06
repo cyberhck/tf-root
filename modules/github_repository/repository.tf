@@ -10,7 +10,7 @@ resource "github_repository" "repository" {
   has_issues             = true
   has_projects           = true
   has_wiki               = false
-  visibility             = "public"
+  private                = false
   vulnerability_alerts   = true
 }
 

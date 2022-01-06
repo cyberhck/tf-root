@@ -14,5 +14,5 @@ terraform {
 
 provider "github" {
   owner = "cyberhck"
-  token = var.github_token
+  token = var.gh_token
 }

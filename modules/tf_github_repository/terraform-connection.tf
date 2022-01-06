@@ -7,7 +7,7 @@ resource "tfe_oauth_client" "tf_github_connection" {
 }
 
 resource "tfe_workspace" "workspace" {
-  name         = "main"
+  name         = var.repository_name
   organization = data.tfe_organization.tfe_org.name
 }
 

@@ -1,4 +1,4 @@
-module "temp" {
+module "test" {
   source = "./modules/tf_github_repository"
   repository_description = "test"
   repository_name = ""
